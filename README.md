@@ -6,6 +6,12 @@ ResumeCraft AI is a modern, AI-powered resume builder built with React and Vite.
 
 The application combines structured resume building, ATS-focused analysis, AI assistance, responsive design, and local persistence into one complete resume workspace.
 
+### 🌐 Live Application
+
+**Live Demo:** https://resumecraft-ai-6tqk.vercel.app/
+
+**GitHub Repository:** https://github.com/triharsha/resumecraft-ai
+
 ---
 
 ## ✨ Features
@@ -47,7 +53,9 @@ Build resumes using structured sections for:
 
 The builder provides a live resume preview while editing your information.
 
-### 🎨 30 Resume Templates
+---
+
+## 🎨 30 Resume Templates
 
 ResumeCraft AI includes **30 customizable resume templates** across multiple design styles.
 
@@ -95,7 +103,9 @@ Templates can be explored using categories including:
 
 Users can search templates and apply a selected template directly to a resume.
 
-### 🎛️ Resume Customization
+---
+
+## 🎛️ Resume Customization
 
 Resume appearance can be customized while maintaining the selected template structure.
 
@@ -106,34 +116,37 @@ Customization includes:
 - Resume preview updates
 - Persistent customization settings
 
-### 🤖 AI-Powered Resume Assistance
+---
+
+## 🤖 AI-Powered Resume Assistance
 
 ResumeCraft AI integrates Gemini-powered assistance through secure server-side API routes.
 
-AI functionality is available across five major areas.
+AI functionality is available across **five major areas**.
 
-#### Professional Summary
+### ✨ Professional Summary
 
 - Rewrite professional summaries
 - Improve clarity and professionalism
-- Review the generated result before applying it
+- Review generated content before applying it
 - Apply or discard AI suggestions
 
-#### Experience
+### 💼 Experience
 
 - Improve experience descriptions
-- Strengthen wording while preserving the user's original facts
+- Strengthen wording while preserving original facts
 - Support structured bullet-style descriptions
 - Prevent near-duplicate recommendations
+- Review suggestions before applying them
 
-#### Projects
+### 🚀 Projects
 
 - Improve project descriptions
 - Produce clearer and more professional project content
 - Preserve technologies and project facts supplied by the user
 - Review suggestions before applying them
 
-#### Skills
+### 🧠 Skills
 
 - Recommend relevant missing skills
 - Avoid suggesting skills already present
@@ -141,13 +154,14 @@ AI functionality is available across five major areas.
 - Prevent unsupported job-description keywords from being automatically added
 - Allow users to explicitly add recommended skills
 
-#### Job / Resume Tailoring
+### 🎯 Job / Resume Tailoring
 
 - Compare resume content with a target job description
 - Generate tailored recommendations
 - Suggest improvements for relevant resume sections
 - Preserve user control over every recommendation
 - Track analysis after successful AI tailoring
+- Regenerate tailoring recommendations when needed
 
 AI-generated content is never silently applied to the resume.
 
@@ -169,7 +183,24 @@ Analysis includes:
 - Improvement suggestions
 - Tailoring recommendations
 
-General resume analysis and job-targeted analysis use different scoring criteria so the results remain relevant to the current workflow.
+General resume analysis and job-targeted analysis use different scoring criteria so results remain relevant to the current workflow.
+
+---
+
+## 🔑 Keyword Intelligence
+
+When a job description is provided, ResumeCraft AI analyzes relevant keywords and compares them against resume content.
+
+The application can display:
+
+- Keyword match percentage
+- Matched keywords
+- Missing keywords
+- Keyword coverage
+- Resume evidence
+- Improvement guidance
+
+Missing keywords are not automatically added to the resume unless supported by the user's existing experience or projects.
 
 ---
 
@@ -216,6 +247,8 @@ The PDF export system includes:
 - Protection against mobile preview scaling affecting the exported document
 - Resume styling preserved during export
 
+PDF export has been validated on both desktop and mobile production layouts.
+
 ---
 
 ## 💾 Local Persistence
@@ -231,28 +264,30 @@ Persistent data includes:
 - Resume customization
 - Application preferences
 
+Resume information remains available across page navigation and browser refreshes within the same browser storage environment.
+
 ---
 
 ## ⚙️ Settings
 
-The Settings page provides application-level preferences including:
+The Settings page provides application-level preferences.
 
-### Theme
+### 🎨 Theme
 
 - Light
 - Dark
 - System
 
-### Accessibility
+### ♿ Accessibility
 
 - Reduced motion preference
 
-### Resume Defaults
+### 📄 Resume Defaults
 
 - Default resume template
 - Default accent color
 
-### Data Management
+### 💾 Data Management
 
 - Export application backup
 - Restore application backup
@@ -295,7 +330,13 @@ Responsive behavior has been tested across:
 - Dialogs
 - PDF export
 
-The application has also been tested at narrow mobile viewport sizes, including **320 × 568**.
+The application has also been validated at a narrow mobile viewport of:
+
+```text
+320 × 568
+```
+
+The production Builder and mobile PDF export both work correctly at this viewport.
 
 ---
 
@@ -328,6 +369,8 @@ GEMINI_API_KEY
 through server-side environment variables.
 
 Local environment files are excluded from Git using `.gitignore`.
+
+In production, `GEMINI_API_KEY` is configured securely through Vercel environment variables.
 
 ---
 
@@ -413,6 +456,7 @@ This keeps AI assistance useful while leaving the final resume under the user's 
 ### Deployment
 
 - Vercel
+- GitHub
 
 ---
 
@@ -463,6 +507,7 @@ resumecraft-ai/
 ├── package.json
 ├── package-lock.json
 ├── README.md
+├── vercel.json
 └── vite.config.js
 ```
 
@@ -490,7 +535,7 @@ npm install
 
 ### 4. Configure the environment variable
 
-Create a local environment file:
+Create:
 
 ```text
 .env.local
@@ -504,9 +549,9 @@ GEMINI_API_KEY=your_gemini_api_key
 
 > Never commit `.env.local` or expose the API key in client-side code.
 
-### 5. Run with Vercel development environment
+### 5. Run the application
 
-Because ResumeCraft AI uses server-side API routes for AI functionality, run:
+Because ResumeCraft AI uses Vercel server-side API routes for AI functionality, run:
 
 ```bash
 npx vercel dev
@@ -544,7 +589,7 @@ Run the complete test suite with:
 npm test
 ```
 
-Current validated test result:
+Latest validated result:
 
 ```text
 18 / 18 test files passed
@@ -577,7 +622,7 @@ Create a production build with:
 npm run build
 ```
 
-Latest production validation:
+The application has been successfully validated using:
 
 ```text
 Vite v8.2.2
@@ -585,7 +630,7 @@ Vite v8.2.2
 Production build: PASS
 ```
 
-The generated production files are placed in:
+The production build generates:
 
 ```text
 dist/
@@ -593,19 +638,63 @@ dist/
 
 ---
 
+## 🌐 Vercel Deployment
+
+ResumeCraft AI is deployed on Vercel.
+
+### Live Production URL
+
+https://resumecraft-ai-6tqk.vercel.app/
+
+The production environment uses:
+
+```text
+GEMINI_API_KEY
+```
+
+configured securely through Vercel Environment Variables.
+
+### SPA Routing
+
+Because ResumeCraft AI uses React Router, Vercel is configured to serve the React application when directly accessing or refreshing client-side routes.
+
+The project includes:
+
+```text
+vercel.json
+```
+
+with SPA routing support while preserving `/api/*` serverless endpoints.
+
+This allows routes such as:
+
+```text
+/resumes
+/templates
+/settings
+/builder/:resumeId
+```
+
+to load and refresh correctly in production.
+
+---
+
 ## ✅ Quality Assurance
 
-ResumeCraft AI has undergone manual and automated QA across the main application workflows.
+ResumeCraft AI has undergone manual and automated QA across its major application workflows.
 
 Validated areas include:
 
 - Home navigation
 - Resume creation
 - Resume editing
+- Resume persistence
+- Browser refresh persistence
 - Resume search
 - Rename
 - Duplicate
 - Delete
+- Confirmation dialogs
 - Template search
 - Template filtering
 - Template selection
@@ -613,24 +702,102 @@ Validated areas include:
 - Settings persistence
 - Backup and restore
 - Empty states
-- Confirmation dialogs
 - ATS analysis
-- Job tailoring
+- Keyword analysis
+- Job targeting
 - Summary AI
 - Experience AI
 - Project AI
 - Skills AI
+- Job Tailoring AI
+- AI suggestion review
 - PDF export
 - Mobile PDF export
 - Responsive layouts
-- Navigation
+- SPA routing
+- Direct-route refresh
+- Production API integration
 - Error handling
 
 ---
 
-## 📌 Current Project Status
+## 🧪 Production Smoke Testing
 
-ResumeCraft AI currently includes:
+The deployed Vercel application has been manually smoke-tested in production.
+
+### Pages
+
+- ✅ Home
+- ✅ My Resumes
+- ✅ Templates
+- ✅ Settings
+- ✅ Builder
+
+### Resume Workflow
+
+- ✅ Resume creation
+- ✅ Auto naming
+- ✅ Data persistence
+- ✅ Refresh persistence
+- ✅ Rename
+- ✅ Duplicate
+- ✅ Delete
+
+### Templates
+
+- ✅ Template gallery
+- ✅ Template selection
+- ✅ Template-based resume creation
+- ✅ Live template preview
+
+### AI
+
+All five production AI areas have been verified:
+
+- ✅ Professional Summary AI
+- ✅ Experience AI
+- ✅ Project AI
+- ✅ Skills AI
+- ✅ Job Tailoring AI
+
+### Analysis
+
+- ✅ ATS scoring
+- ✅ Score breakdown
+- ✅ Keyword intelligence
+- ✅ Matched keywords
+- ✅ Missing keywords
+- ✅ Tailoring recommendations
+
+### PDF
+
+- ✅ Desktop PDF export
+- ✅ Mobile PDF export
+- ✅ Correct PDF positioning
+- ✅ No upper-left compression regression
+
+### Responsive
+
+- ✅ Production desktop layout
+- ✅ Production mobile Builder
+- ✅ 320 × 568 viewport
+- ✅ Mobile scrolling and controls
+- ✅ Mobile PDF export
+
+### Routing
+
+- ✅ Client-side navigation
+- ✅ Direct route loading
+- ✅ Browser refresh on Builder routes
+- ✅ Vercel SPA fallback
+
+---
+
+## 📌 Project Status
+
+ResumeCraft AI is **feature-complete and deployed**.
+
+Current status:
 
 - ✅ Core resume builder
 - ✅ Resume management
@@ -652,26 +819,23 @@ ResumeCraft AI currently includes:
 - ✅ Automated testing
 - ✅ Production lint validation
 - ✅ Production build validation
-- ✅ Git repository setup
+- ✅ Git repository
 - ✅ GitHub repository
-- ⏳ Vercel deployment
-- ⏳ Production smoke testing
+- ✅ Vercel deployment
+- ✅ SPA production routing
+- ✅ Production smoke testing
 
 ---
 
-## 🌐 Deployment
+## 🔗 Links
 
-ResumeCraft AI is prepared for deployment using Vercel.
+**Live Application**
 
-The production deployment requires the following environment variable:
+https://resumecraft-ai-6tqk.vercel.app/
 
-```text
-GEMINI_API_KEY
-```
+**GitHub Repository**
 
-The key should be configured through the Vercel project environment settings and must never be committed to the repository.
-
-The production URL will be added here after deployment.
+https://github.com/triharsha/resumecraft-ai
 
 ---
 
