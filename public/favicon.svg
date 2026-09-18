@@ -1,0 +1,114 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 64 64"
+>
+  <!-- ResumeCraft AI favicon -->
+
+  <defs>
+    <linearGradient
+      id="resumeGradient"
+      x1="8"
+      y1="8"
+      x2="56"
+      y2="56"
+      gradientUnits="userSpaceOnUse"
+    >
+      <stop
+        offset="0%"
+        stop-color="#7c3aed"
+      />
+      <stop
+        offset="100%"
+        stop-color="#4f46e5"
+      />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect
+    x="4"
+    y="4"
+    width="56"
+    height="56"
+    rx="14"
+    fill="url(#resumeGradient)"
+  />
+
+  <!-- Resume document -->
+  <path
+    d="M19 14
+       H38
+       L47 23
+       V49
+       C47 51.2 45.2 53 43 53
+       H19
+       C16.8 53 15 51.2 15 49
+       V18
+       C15 15.8 16.8 14 19 14Z"
+    fill="white"
+  />
+
+  <!-- Folded corner -->
+  <path
+    d="M38 14
+       V23
+       H47"
+    fill="#ddd6fe"
+  />
+
+  <!-- Profile -->
+  <circle
+    cx="25"
+    cy="28"
+    r="4"
+    fill="#7c3aed"
+  />
+
+  <path
+    d="M19.5 38
+       C20.5 33.8 23 32 25 32
+       C27 32 29.5 33.8 30.5 38"
+    fill="#7c3aed"
+  />
+
+  <!-- Resume lines -->
+  <rect
+    x="34"
+    y="29"
+    width="8"
+    height="2.5"
+    rx="1.25"
+    fill="#7c3aed"
+  />
+
+  <rect
+    x="34"
+    y="35"
+    width="8"
+    height="2.5"
+    rx="1.25"
+    fill="#a78bfa"
+  />
+
+  <rect
+    x="20"
+    y="43"
+    width="22"
+    height="2.5"
+    rx="1.25"
+    fill="#c4b5fd"
+  />
+
+  <!-- AI sparkle -->
+  <path
+    d="M49 8
+       L51.1 13.9
+       L57 16
+       L51.1 18.1
+       L49 24
+       L46.9 18.1
+       L41 16
+       L46.9 13.9Z"
+    fill="#facc15"
+  />
+</svg>

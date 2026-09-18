@@ -1,0 +1,555 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans:
+    "Inter",
+    "Segoe UI",
+    sans-serif;
+
+  --color-primary:
+    #7c3aed;
+
+  --color-primary-dark:
+    #6d28d9;
+
+  --color-accent:
+    #8b5cf6;
+
+  --color-ai:
+    #7c3aed;
+
+  --color-success:
+    #059669;
+
+  --color-warning:
+    #d97706;
+
+  --color-danger:
+    #e11d48;
+}
+
+/* ========================================
+   Base
+======================================== */
+
+html {
+  scroll-behavior:
+    smooth;
+
+  background:
+    #f8f7f4;
+}
+
+html,
+body,
+#root {
+  width:
+    100%;
+
+  max-width:
+    100%;
+}
+
+body {
+  margin:
+    0;
+
+  min-width:
+    320px;
+
+  min-height:
+    100vh;
+
+  overflow-x:
+    hidden;
+
+  background:
+    #f8f7f4;
+
+  color:
+    #18181b;
+
+  font-family:
+    var(--font-sans);
+
+  text-rendering:
+    optimizeLegibility;
+
+  -webkit-font-smoothing:
+    antialiased;
+
+  -moz-osx-font-smoothing:
+    grayscale;
+}
+
+/* ========================================
+   Dark Mode
+======================================== */
+
+html.dark {
+  background:
+    #111113;
+
+  color-scheme:
+    dark;
+}
+
+html.dark body {
+  background:
+    #111113;
+
+  color:
+    #fafafa;
+}
+
+/* ========================================
+   Root
+======================================== */
+
+#root {
+  min-height:
+    100vh;
+}
+
+/* ========================================
+   Elements
+======================================== */
+
+a {
+  color:
+    inherit;
+
+  text-decoration:
+    none;
+}
+
+button,
+input,
+textarea,
+select {
+  font:
+    inherit;
+}
+
+button {
+  cursor:
+    pointer;
+}
+
+button:disabled {
+  cursor:
+    not-allowed;
+}
+
+img,
+svg,
+video,
+canvas {
+  max-width:
+    100%;
+}
+
+/* ========================================
+   Selection
+======================================== */
+
+::selection {
+  background:
+    rgba(
+      124,
+      58,
+      237,
+      0.18
+    );
+
+  color:
+    #18181b;
+}
+
+.dark ::selection {
+  background:
+    rgba(
+      139,
+      92,
+      246,
+      0.28
+    );
+
+  color:
+    #ffffff;
+}
+
+/* ========================================
+   Scrollbar
+======================================== */
+
+::-webkit-scrollbar {
+  width:
+    10px;
+
+  height:
+    10px;
+}
+
+::-webkit-scrollbar-track {
+  background:
+    transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background:
+    #d6d3d1;
+
+  border:
+    2px solid
+    transparent;
+
+  border-radius:
+    999px;
+
+  background-clip:
+    padding-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background:
+    #a8a29e;
+
+  background-clip:
+    padding-box;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background:
+    #3f3f46;
+
+  background-clip:
+    padding-box;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background:
+    #52525b;
+
+  background-clip:
+    padding-box;
+}
+
+/* ========================================
+   Focus
+======================================== */
+
+:focus-visible {
+  outline:
+    2px solid
+    #7c3aed;
+
+  outline-offset:
+    2px;
+}
+
+/* ========================================
+   Container
+======================================== */
+
+.container-shell {
+  width:
+    min(
+      calc(
+        100% - 2rem
+      ),
+      1280px
+    );
+
+  max-width:
+    100%;
+
+  margin-inline:
+    auto;
+}
+
+@media (
+  min-width: 640px
+) {
+  .container-shell {
+    width:
+      min(
+        calc(
+          100% - 3rem
+        ),
+        1280px
+      );
+  }
+}
+
+@media (
+  min-width: 1024px
+) {
+  .container-shell {
+    width:
+      min(
+        calc(
+          100% - 4rem
+        ),
+        1280px
+      );
+  }
+}
+
+/* ========================================
+   Resume Paper
+======================================== */
+
+.resume-paper {
+  background:
+    #ffffff;
+
+  color:
+    #18181b;
+
+  border:
+    1px solid
+    #e7e5e4;
+
+  box-shadow:
+    0
+    4px
+    12px
+    rgba(
+      24,
+      24,
+      27,
+      0.04
+    ),
+    0
+    24px
+    60px
+    rgba(
+      24,
+      24,
+      27,
+      0.08
+    );
+}
+
+/* ========================================
+   AI Gradient
+======================================== */
+
+.ai-gradient-text {
+  background:
+    linear-gradient(
+      90deg,
+      #6d28d9,
+      #8b5cf6,
+      #a855f7
+    );
+
+  background-clip:
+    text;
+
+  -webkit-background-clip:
+    text;
+
+  color:
+    transparent;
+}
+
+/* ========================================
+   AI Surface
+======================================== */
+
+.ai-surface {
+  background:
+    linear-gradient(
+      135deg,
+      rgba(
+        124,
+        58,
+        237,
+        0.06
+      ),
+      rgba(
+        168,
+        85,
+        247,
+        0.035
+      )
+    );
+
+  border:
+    1px solid
+    rgba(
+      124,
+      58,
+      237,
+      0.15
+    );
+}
+
+.dark .ai-surface {
+  background:
+    linear-gradient(
+      135deg,
+      rgba(
+        124,
+        58,
+        237,
+        0.12
+      ),
+      rgba(
+        168,
+        85,
+        247,
+        0.07
+      )
+    );
+
+  border-color:
+    rgba(
+      167,
+      139,
+      250,
+      0.18
+    );
+}
+
+/* ========================================
+   ATS Surface
+======================================== */
+
+.ats-surface {
+  background:
+    rgba(
+      5,
+      150,
+      105,
+      0.06
+    );
+
+  border:
+    1px solid
+    rgba(
+      5,
+      150,
+      105,
+      0.16
+    );
+}
+
+.dark .ats-surface {
+  background:
+    rgba(
+      5,
+      150,
+      105,
+      0.10
+    );
+
+  border-color:
+    rgba(
+      52,
+      211,
+      153,
+      0.18
+    );
+}
+
+/* ========================================
+   Builder Horizontal Section Navigation
+======================================== */
+
+.builder-section-scroll {
+  width:
+    100%;
+
+  max-width:
+    100%;
+
+  overflow-x:
+    auto;
+
+  overflow-y:
+    hidden;
+
+  overscroll-behavior-x:
+    contain;
+
+  touch-action:
+    pan-x;
+
+  -webkit-overflow-scrolling:
+    touch;
+
+  scrollbar-width:
+    none;
+}
+
+.builder-section-scroll::-webkit-scrollbar {
+  display:
+    none;
+}
+
+/* ========================================
+   Reduced Motion
+======================================== */
+
+.reduce-motion,
+.reduce-motion *,
+.reduce-motion *::before,
+.reduce-motion *::after {
+  scroll-behavior:
+    auto !important;
+
+  animation-duration:
+    0.01ms !important;
+
+  animation-iteration-count:
+    1 !important;
+
+  transition-duration:
+    0.01ms !important;
+
+  transition-delay:
+    0ms !important;
+}
+
+@media (
+  prefers-reduced-motion: reduce
+) {
+  html,
+  html *,
+  html *::before,
+  html *::after {
+    scroll-behavior:
+      auto !important;
+
+    animation-duration:
+      0.01ms !important;
+
+    animation-iteration-count:
+      1 !important;
+
+    transition-duration:
+      0.01ms !important;
+
+    transition-delay:
+      0ms !important;
+  }
+}
+
+/* ========================================
+   Hide Scrollbar
+======================================== */
+
+.hide-scrollbar {
+  scrollbar-width:
+    none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display:
+    none;
+}
