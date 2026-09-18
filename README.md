@@ -409,6 +409,40 @@ This keeps AI assistance useful while leaving the final resume under the user's 
 
 ---
 
+## 📸 Screenshots
+
+### 🏠 Home
+
+The ResumeCraft AI home page provides quick access to resume creation, workspace activity, recent resumes, AI capabilities, and important application features.
+
+![ResumeCraft AI Home](screenshots/home.png)
+
+### 🎨 Resume Templates
+
+Explore **30 professionally designed resume templates** with search and category filtering across Modern, Professional, Minimal, Classic, Creative, and Technical styles.
+
+![ResumeCraft AI Templates](screenshots/templates.png)
+
+### ✍️ Resume Builder
+
+The Resume Builder combines structured editing with a live resume preview, allowing users to see their resume update while entering and customizing content.
+
+![ResumeCraft AI Builder](screenshots/builder.png)
+
+### 📊 ATS & Resume Analysis
+
+The Analysis workspace evaluates resume quality, ATS-related criteria, keyword alignment, evidence, content quality, and job-description relevance.
+
+![ResumeCraft AI Analysis](screenshots/analysis.png)
+
+### 🤖 AI Resume Tailoring
+
+Gemini-powered job tailoring reviews the resume against the target job description and provides section-specific recommendations that users can review, apply, or discard.
+
+![ResumeCraft AI Tailoring](screenshots/ai-tailoring.png)
+
+---
+
 ## 🛠️ Tech Stack
 
 ### Frontend
@@ -476,6 +510,13 @@ resumecraft-ai/
 │
 ├── public/
 │   └── favicon.svg
+│
+├── screenshots/
+│   ├── ai-tailoring.png
+│   ├── analysis.png
+│   ├── builder.png
+│   ├── home.png
+│   └── templates.png
 │
 ├── src/
 │   ├── components/
@@ -824,16 +865,17 @@ Current status:
 - ✅ Vercel deployment
 - ✅ SPA production routing
 - ✅ Production smoke testing
+- ✅ Portfolio screenshots
 
 ---
 
 ## 🔗 Links
 
-**Live Application**
+### Live Application
 
 https://resumecraft-ai-6tqk.vercel.app/
 
-**GitHub Repository**
+### GitHub Repository
 
 https://github.com/triharsha/resumecraft-ai
 
